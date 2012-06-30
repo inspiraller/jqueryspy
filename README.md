@@ -34,7 +34,6 @@ Without JQuery Spy Example
 ==
 
 <pre>
-						<code>
 
 test( "Test ajax and view", function () {
 
@@ -161,6 +160,83 @@ test( "Test ajax and view", function () {
 }); 
 
 
+
+</pre>
+
+With JQuery Spy Example:
+==
+
+<pre>
+
+test( "Test ajax and view", function () { 
+
+ 	
+
+<strong>	
+
+//Prepare spy tests....	
+
+   var spy = $.spy({
+
+      ajax:{
+
+         url:"/someUrl/",		 
+
+         dataType:'jsonp',
+
+         type:'GET',
+
+         success:{
+
+            views:[{
+
+               el:'#someSelector',
+
+               css:{'visibility':'visible'},
+
+               html:'some code here...'					
+
+            }]
+
+        }
+
+      }			
+
+   });
+
+   </strong>
+
+//Run original ajax method
+
+   $.ajax({
+
+      url:'/actions/jsonpproxy/?url=/actions/json.js',
+
+         dataType:'jsonp',
+
+         type:'GET',
+
+         cache:'false',		
+
+         success:function(data){		
+
+            $('#qunit-fixture').html('&lt;div id="someSelector"&gt;Some code here...&lt;/div&gt;');
+
+            $('#someSelector').css({'visibility':'visible'});
+
+         }
+
+   });	
+
+   <strong>
+
+//Collect data from spy and run request tests
+
+//Collect data from spy and run response tests
+
+   spy.run();</strong>
+
+});		 
 
 </pre>
 				
