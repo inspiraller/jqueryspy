@@ -5,7 +5,7 @@ Providing concise syntax for ajax tdd
 
 See <a href="http://jqueryspy.com/">http://jqueryspy.com/</a> for further details:
 
-  					
+						
 
 						<h3 id="a1">What is JQuery Spy?</h3>
 
@@ -262,3 +262,4 @@ test( "Test ajax and view", function () {
 });		 
 
 						</code>	
+
