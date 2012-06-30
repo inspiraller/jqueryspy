@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>	   
+
+	<link rel="stylesheet" href="/static/css/qunit.css" />
+	<link rel="stylesheet" href="/static/css/qunit.custom.css" />
+
+	<script src="/static/js/lib/qunit.js"></script>
+	<script src="/static/js/lib/sinon.js"></script>
+	<script src="/static/js/lib/jquery.js"></script>
+	<script src="/static/js/lib/jquery.spy.current.js"></script>
+	<script>
+		test("Test ajax was called", function () {
+			var spy = $.spy({
+				ajax:{}
+			});
+			$.ajax({
+				url:'/actions/text.htm'
+			});
+			spy.run();	
+		});
+	</script>
+</head>
+<body>
+	<div id="qunitPanel">
+		<h1 id="qunit-header">QUnit Test Suite</h1>
+		<h2 id="qunit-banner"></h2>
+		<div id="qunit-testrunner-toolbar"></div>
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
+		<div id="qunit-fixture">test markup</div>
+	</div>
+ <script type="text/javascript" src="/static/js/global.js"></script>
+</body>
+</html>
+
+

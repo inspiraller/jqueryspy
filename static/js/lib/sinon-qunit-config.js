@@ -1,0 +1,1 @@
+sinon.config.useFakeTimers = false ;
