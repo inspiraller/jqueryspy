@@ -36,7 +36,6 @@ Without JQuery Spy Example
 <pre>
 
 test( "Test ajax and view", function () {
-
 <strong>
 
 //Prepare spy tests....	
@@ -49,16 +48,15 @@ test( "Test ajax and view", function () {
       equals( ajaxParams.url, "/actions/jsonpproxy/?url=/actions/json.js" , 'ajax url');  
       equals( ajaxParams.dataType, "jsonp", 'ajax jsonp' ); 			
       equals( ajaxParams.type, "GET", 'ajax type' ); 
-
    },		
    fnTestResponse = function(spyDetails){	
+   
 //Collect data from spy and run response tests		
       ok(spyDetails, 'ajax success method completed under ' + intMaxAjaxWait + ' seconds.');
       ok( $('#someSelector').length, 'someSelector exists'); 
       equals( $('#someSelector').html(), 'Some code here...' , 'someSelector html'); 
       equals( $('#someSelector').css('visibility'), 'visible', 'someSelector visibility' );	
    };	
-
    var spyDetails = {returnValue:{status:null}},
    intStartTime = new Date().getTime(),
    fnTimer = function(){
@@ -77,7 +75,6 @@ test( "Test ajax and view", function () {
          }
       },100);	//test every 10th of a second.
    }
-
    expect(intExpectCount);
    this.spy($, 'ajax');
    stop();
@@ -95,7 +92,6 @@ test( "Test ajax and view", function () {
             $('#someSelector').css({'visibility':'visible'});
          }
    });		
-
 <strong>	
 //Collect data from spy and run request tests	
    spyDetails = $.ajax.getCall(0);
@@ -106,11 +102,10 @@ test( "Test ajax and view", function () {
 
 With JQuery Spy Example:
 ==
-
 <pre>
-test( "Test ajax and view", function () { 
- 	
+test( "Test ajax and view", function () {  
 <strong>	
+
 //Prepare spy tests....	
    var spy = $.spy({
       ajax:{
@@ -140,6 +135,7 @@ test( "Test ajax and view", function () {
          }
    });	
    <strong>
+   
 //Collect data from spy and run request tests
 //Collect data from spy and run response tests
    spy.run();</strong>
