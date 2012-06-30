@@ -21,13 +21,13 @@ As a Developer, I want to test
 
 As a Developer, I want to test the following in an easy to remember syntax:
 
-Test the $.ajax method was called
-Test ajax request url
-Test ajax request type
-Test ajax request dataType
-Test ajax response success method was called within a certain time
-After ajax response, test an element exists
-After ajax response, test an element style
-After ajax response, test an element contents
+* Test the $.ajax method was called
+* Test ajax request url
+* Test ajax request type
+* Test ajax request dataType
+* Test ajax response success method was called within a certain time
+* After ajax response, test an element exists
+* After ajax response, test an element style
+* After ajax response, test an element contents
 
 				
